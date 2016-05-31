@@ -1,0 +1,11 @@
+[watch]
+screen_names:CaltrainBBullet,2d
+    CaltrainLimited,2d
+    CaltrainLocal,2d
+
+# Create your app on http://apps.twitter.com
+[twitter]
+consumer_key:
+consumer_secret:
+access_token:
+access_token_secret:
