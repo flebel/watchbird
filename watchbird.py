@@ -31,7 +31,7 @@ def load_config(filename):
 def watch(api, screen_name, warning):
     statuses = api.user_timeline(screen_name, count=1, include_rts=True)
     seconds_warning = convert_to_seconds(warning)
-    if statuses and (statuses[0].created_at - timedelta(seconds=seconds_warning)) < (datetime.now() - timedelta(seconds=seconds_warning)):
+    if statuses and statuses[0].created_at < (datetime.now() - timedelta(seconds=seconds_warning)):
         send_email_notification(screen_name, warning)
 
 def send_email_notification(screen_name, warning):
